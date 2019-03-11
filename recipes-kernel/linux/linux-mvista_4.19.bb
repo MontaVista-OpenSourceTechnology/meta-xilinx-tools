@@ -1,6 +1,6 @@
-MV_KERNEL_BRANCH ?= "mvl-4.14/msd.eval.xilinx-zynq"
-MV_KERNEL_TREE ?= "git://github.com/MontaVista-OpenSourceTechnology/linux-mvista-2.4.git;protocol=https"
-MV_KERNELCACHE_BRANCH ?= "yocto-4.14"
+MV_KERNEL_BRANCH ?= "mvl-4.19/msd.cgx"
+MV_KERNEL_TREE ?= "git://github.com/MontaVista-OpenSourceTechnology/linux-mvista-2.6.git;protocol=https"
+MV_KERNELCACHE_BRANCH ?= "yocto-4.19"
 MV_KERNELCACHE_TREE ?= "git://github.com/MontaVista-OpenSourceTechnology/yocto-kernel-cache;protocol=https"
 
 require recipes-kernel/linux/linux-yocto.inc
@@ -13,7 +13,7 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 S = "${WORKDIR}/git"
 
-LINUX_VERSION = "4.14"
+LINUX_VERSION = "4.19"
 KERNEL_VERSION_SANITY_SKIP="1"
 PV = "${LINUX_VERSION}+git${SRCPV}"
 
@@ -27,3 +27,4 @@ KMETA = "kernel-meta"
 KCONF_BSP_AUDIT_LEVEL = "0"
 COMPATIBLE_MACHINE_zedboard-zynq7 = "zedboard-zynq7"
 COMPATIBLE_MACHINE_zc702-zynq7 = "zc702-zynq7"
+COMPATIBLE_MACHINE_ultra96-zynqmp = "ultra96-zynqmp"
