@@ -9,7 +9,7 @@ SRCREV_machine ?= "${MV_KERNEL_BRANCH}"
 SRCREV_meta ?= "${MV_KERNELCACHE_BRANCH}"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
-
+LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
 S = "${WORKDIR}/git"
 
