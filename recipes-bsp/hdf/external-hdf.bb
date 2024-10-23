@@ -6,7 +6,7 @@ PROVIDES = "virtual/hdf"
 
 INHIBIT_DEFAULT_DEPS = "1"
 
-inherit deploy
+inherit deploy nopackages
 
 HDF_BASE ?= "git://"
 HDF_PATH ??= "github.com/Xilinx/hdf-examples.git"
